@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <title>GRIMALDO SOLAR ENERGY</title>
+</head>
+<body>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <h1>GRIMALDO SOLAR ENERGY</h1>
+        
+        <!-- Información del clima -->
+        <div id="clima-info" class="mt-3">
+            <!-- Aquí se mostrará la información del clima -->
+        </div>
+        <div id="clima-icon" class="mt-3">
+            <!-- Aquí se muestra el icono del clima-->
+        </div>
+
+        <!-- Botón para calcular consumo -->
+        <button class="btn btn-primary mt-3" onclick="mostrarCalculadora()">Calcula tu consumo</button>
+
+        <!-- Elemento lateral para la calculadora -->
+        <div id="calculadora-lateral" style="display: none;">
+            <h3 class="mt-3">Calculadora de KwH Solar</h3>
+        
+            <div class="form-group">
+                <label for="refrigerador">De cuántos pies es tu refrigerador?</label>
+                <input type="number" class="form-control calculoskwh" id="refrigerador" placeholder="Ingrese la cantidad">
+            </div>
+        
+            <div class="form-group">
+                <label for="aires">Cuantos aires acondicionados tienes?</label>
+                <input type="number" class="form-control calculoskwh" id="aires" placeholder="Ingrese la cantidad">
+            </div>
+        
+            <div class="form-group">
+                <label for="televisiones">Cuantas televisiones tienes?</label>
+                <input type="number" class="form-control calculoskwh" id="televisiones" placeholder="Ingrese la cantidad">
+            </div>
+        
+            <button class="btn btn-primary" onclick="calcularConsumo()">Calcular</button>
+            <p id="resultado" class="mt-3">La cantidad de paneles solares necesarios será calculada aquí.</p>
+        </div>
+    </div>
+
+    <script type="module" src="funciones/clima.js"></script>
+    <script type="module" src="funciones/calculadora.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
