@@ -48,7 +48,8 @@ function informacionClima(apiUrl) {
         .then(data => {
             const kelvin = data.main.temp;
             const celsius = parseInt(kelvin - 273.15);
-            const climaInfo = `Temperatura: ${celsius}°C`;
+            const nombreCiudad = data.name;
+            const climaInfo = `${nombreCiudad}: ${celsius}°C`;
 
             // Añadir el icono del clima
             const iconoClima = data.weather[0].icon;
